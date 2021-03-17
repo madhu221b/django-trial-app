@@ -1,0 +1,22 @@
+<!-- templates/search_results.html-->
+<h1>Search Results</h1>
+
+<ul>
+  {% for student in object_list %}
+    <li>
+      Full Name : {{student.firstname}} {{student.lastname}} <br/>
+      Email : {{ student.email}} <br/>
+      Gender : {{student.gender}} <br/>
+      School Name : {{student.school.school}} <br/>
+      Phone : {{student.school.phone}} <br/>
+      Book Title : {{student.books.title}} <br/>
+      Pages : {{student.books.no_of_pages}}
+    </li>
+  {% endfor %}
+</ul>
+
+<!--<form method="get" action="/search_student/">-->
+<!--  Student ID :<input type="text" name="id" id="id_q" value="{{ id }}"/>-->
+<!--  Student Name :<input type="text" name="name" id="id_name" value="{{ name }}"/>-->
+<!--  <input type="submit" value="Search" />-->
+<!--</form>-->

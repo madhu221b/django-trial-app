@@ -1,0 +1,8 @@
+<h1>HomePage</h1>
+
+<form action="{% url 'search_results' %}" method="get">
+<!--  <input name="q" type="text" placeholder="Student ID">-->
+    Student Id:<input type="number" name="q" id="id_q" value="{{ query }}"/> <br/> <br/>
+    Student Name:<input type="text" name="q_name" id="id_name" value="{{ query_name }}"/><br/> <br/>
+  <input type="submit" value="Search" />
+</form>
