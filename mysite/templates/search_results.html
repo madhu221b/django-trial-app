@@ -4,7 +4,11 @@
 <ul>
   {% for student in object_list %}
     <li>
+      {% if student.lastname != "null" %}
       Full Name : {{student.firstname}} {{student.lastname}} <br/>
+      {% else %}
+      Full Name : {{student.firstname}} <br/>
+      {% endif %}
       Email : {{ student.email}} <br/>
       Gender : {{student.gender}} <br/>
       School Name : {{student.school.school}} <br/>
